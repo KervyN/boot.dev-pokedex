@@ -17,6 +17,18 @@ func TestCleanInput(t *testing.T) {
 			input:    " THIS is A FrEaKiNg Nightare !  ",
 			expected: []string{"this", "is", "a", "freaking", "nightare", "!"},
 		},
+		{
+			input:    "singleword",
+			expected: []string{"singleword"},
+		},
+		{
+			input:    "  UPPER  ",
+			expected: []string{"upper"},
+		},
+		{
+			input:    "",
+			expected: []string{""},
+		},
 	}
 
 	for _, c := range cases {
